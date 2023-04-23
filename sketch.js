@@ -29,32 +29,32 @@ const toggleSoundButton = document.getElementById("sound-toggle-button");
 const toggleWallButton = document.getElementById("toggle-wall-button");
 const startButton = document.getElementById("start-button");
 
-const http = require('http')
-const fs = require('fs')
-const port = 3000
+// const http = require('http')
+// const fs = require('fs')
+// const port = 3000
  
-const server = http.createServer(function(req,res) {
-    res.writeHead(200, {'Content-Type':'text/html'})
-    fs.readFile('index.html', function(error, data){
-        if(error){
-            res.writeHead(404)
-            res.write('Error: File not found')
-        }else{
-            res.write(data)
-        }
-        res.end()
-    })
+// const server = http.createServer(function(req,res) {
+//     res.writeHead(200, {'Content-Type':'text/html'})
+//     fs.readFile('index.html', function(error, data){
+//         if(error){
+//             res.writeHead(404)
+//             res.write('Error: File not found')
+//         }else{
+//             res.write(data)
+//         }
+//         res.end()
+//     })
  
-})
+// })
  
-server.listen(port, function(error) {
-    if (error) {
-        console.log('An error has occured', error)
+// server.listen(port, function(error) {
+//     if (error) {
+//         console.log('An error has occured', error)
  
-    } else {
-        console.log('Server is running on port ' + port)
-    }
-})
+//     } else {
+//         console.log('Server is running on port ' + port)
+//     }
+// })
 
 function preload() {
   bgm = loadSound("soundsmp3/bgmusic.mp3");
